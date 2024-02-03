@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lesson 3 challenges</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+        <!-- 
+		Додайте тут елеиент style 
+		В сепедині style визначте селектор p з властивістю color: red;
+	-->
+
+        <style>
+            p {
+                color: red;
+            }
+
+            #exciting {
+                background: #f69d3c;
+                border: 1px solid #696969;
+                padding: 10px;
+            }
+
+            /* Чи буде змінна --bgColor видимою для елемента body. Яким буде фон елемента body і чому. 
+            
+            Відповідь: бг-колір body буде дефолтним через те, що він є головним по відношенню до дів'a.
+            */
+            body {
+                background: var(--bgColor);
+            }
+
+            div {
+                --bgColor: limegreen;
+            }
+
+            /*
+        визначте для елементів p властивість фону таким чином:
+        background: var(--bgColor);
+        */
+            p {
+                background: var(--bgColor);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Сторінка Вікіпедії для мови CSS</h2>
+        <!-- На сайті Wikipedia знайдіть сторінку про CSS українською мовою -->
+
+        <!-- Додайте тут елеиент iframe з посиланням на українську версію Wikipedia page for the CSS language -->
+
+        <!-- В елеиенті iframe визначте атрибут title зі значенням Сторінка Вікіпедії для мови CSS -->
+
+        <iframe
+            title="Сторінка Вікіпедії для мови CSS"
+            src="https://uk.wikipedia.org/wiki/CSS"
+            width="500px"
+            height="350px"
+        ></iframe>
+
+        <!-- 
+		Додайте тут елеиент p з текстом This is my paragraph.
+		визначте атрибут style для тега p зі значенням color: blue;
+	-->
+
+        <!-- 
+		який колір буде мати текст This is my paragraph і чому.
+	-->
+        <p style="color: blue">This is my paragraph.</p>
+
+        <p>Звичайний, нудний абзац. Намагайтеся не заснути.</p>
+        <p id="exciting">
+            The most exciting paragraph on the page. One of a kind!
+        </p>
+
+        <div id="exciting1">
+            The most exciting paragraph on the page. One of a kind!
+        </div>
+
+        <!-- Додайте тут 2 елеиенти div: -->
+        <div>
+            <h3>Div 1</h3>
+            <p>Paragraph 1</p>
+        </div>
+
+        <div>
+            <h3>Div 2</h3>
+            <p>Paragraph 2</p>
+        </div>
+    </body>
+</html>

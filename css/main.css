@@ -1,0 +1,12 @@
+@import url("my-imported-styles.css");
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* more styles */
+
+body {
+    color: var(--primary-text-color);
+    background: var(--primary-bg-color);
+}
