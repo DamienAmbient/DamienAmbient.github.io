@@ -34,7 +34,11 @@ body > h1:first-of-type + h2 {
 
 p.first a {
     color: green;
-    text-decoration: underline;
+}
+
+p .first a {
+    background-color: #e60202;
+    text-decoration: none;
 }
 
 div ~ p {
@@ -42,7 +46,7 @@ div ~ p {
 }
 
 .translucent-box {
-    background: hsl(0deg, 100%, 50%);
+    background: hsl(0deg, 100%, 50%, 0.5);
 }
 
 body {
