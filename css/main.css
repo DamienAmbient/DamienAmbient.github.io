@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("common.css");
 * {
     margin: 0;
@@ -9,4 +10,26 @@
 body {
     color: var(--primary-text-color);
     background: var(--primary-bg-color);
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.45rem;
+}
+h2 {
+    font-size: 1.3rem;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.footer-social {
 }
