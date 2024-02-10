@@ -32,4 +32,27 @@ h2 {
 }
 
 .footer-social {
+    /* чомусь пусто з попереднього завдання?? */
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.bg-dark {
+    background-color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+ul.categories li {
+    color: indigo;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+ul.categories li a:hover {
+    background-color: lightgray;
 }
