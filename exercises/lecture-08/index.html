@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                /* padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 25px;
+                padding-left: 20px; */
+
+                padding: 10px 20px 25px 20px;
+
+                /* margin-top: 25px;
+                margin-right: 20px;
+                margin-bottom: 25px;
+                margin-left: 20px; */
+
+                margin: 25px 20px 25px 20px;
+
+                background-color: red;
+            }
+
+            div {
+                border: 10px dotted black;
+                padding: 15px;
+                background: lightblue;
+            }
+
+            #example1 {
+                background-clip: border-box;
+            }
+            #example2 {
+                background-clip: padding-box;
+            }
+            #example3 {
+                background-clip: content-box;
+            }
+
+            h1 {
+                display: inline-block;
+                width: min-content;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+
+        <div id="example1">
+            <p>
+                Правило для example1: фон всередині елемента має простягатися за
+                межі рамки.
+            </p>
+        </div>
+
+        <div id="example2">
+            <p>
+                Правило для example2: фон всередині елемента має простягатися до
+                внутрішнього краю рамки.
+            </p>
+        </div>
+
+        <div id="example3">
+            <p>
+                Правило для example3: фон всередині елемента має простягатися до
+                краю поля вмісту.
+            </p>
+        </div>
+
+        <h1><span>Awesome article</span></h1>
+    </body>
+</html>
