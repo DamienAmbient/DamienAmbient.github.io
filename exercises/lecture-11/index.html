@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>lecture №11 - Модуль Grid</title>
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        <style>
+            main div:nth-of-type(1) {
+                background-color: #c9316b;
+            }
+            main div:nth-of-type(2) {
+                background-color: #c9319e;
+            }
+            main div:nth-of-type(3) {
+                background-color: #c231c9;
+            }
+            main div:nth-of-type(4) {
+                background-color: #8f31c9;
+            }
+            main div:nth-of-type(5) {
+                background-color: #5c31c9;
+            }
+            main div:nth-of-type(6) {
+                background-color: #3138c9;
+            }
+            main div:nth-of-type(7) {
+                background-color: #316bc9;
+            }
+            main div:nth-of-type(8) {
+                background-color: #319ec9;
+            }
+            main div:nth-of-type(9) {
+                background-color: #31c9c2;
+            }
+            main div:nth-of-type(10) {
+                background-color: #31c98f;
+            }
+            main div:nth-of-type(11) {
+                background-color: #31c95c;
+            }
+            main div:nth-of-type(12) {
+                background-color: #38c931;
+            }
+
+            main {
+                margin: 2vw 0;
+            }
+
+            main div {
+                color: #fff;
+                padding: 5vh;
+                display: grid;
+            }
+
+            section div {
+                display: grid;
+                background-color: green;
+                border-bottom: 1px solid;
+                border-color: black;
+            }
+
+            #color-red {
+                background-color: red;
+            }
+            #empty {
+                background-color: #fff;
+                margin-top: 1rem;
+            }
+
+            #first {
+                grid-template-columns: 15% 60% 25%;
+            }
+
+            #second {
+                grid-template-rows: 95px 1fr 70px;
+            }
+
+            #third {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 90px 300px 1fr;
+            }
+            #fourth {
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
+            }
+
+            #fifth {
+                grid-template-columns: repeat(4, 50px);
+                justify-content: end;
+            }
+
+            #sixth {
+                grid-template-columns: repeat(4, 50px);
+                justify-content: space-between;
+            }
+
+            #seventh {
+                grid-template-columns: repeat(4, 50px);
+                justify-content: space-around;
+            }
+            #eighth {
+                grid-template-columns: repeat(4, 50px);
+                justify-content: space-evenly;
+            }
+            #ninth {
+                grid-template-columns: repeat(2, 1fr);
+                place-items: stretch;
+            }
+            #tenth {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: start;
+            }
+            #eleventh {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
+            }
+            #twelfth {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-between;
+            }
+            #thirteenth {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-evenly;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>CSS Grid Layout</h1>
+        </header>
+
+        <main>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </main>
+        <section>
+            <div id="empty">first</div>
+            <div id="first">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+            </div>
+
+            <div id="empty">second</div>
+
+            <div id="second">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+            </div>
+
+            <div id="empty">third</div>
+
+            <div id="third">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+                <div>4</div>
+            </div>
+
+            <div id="empty">fourth</div>
+
+            <div id="fourth">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+                <div>4</div>
+            </div>
+
+            <div id="empty">fifth</div>
+
+            <div id="fifth">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+                <div>4</div>
+            </div>
+
+            <div id="empty">sixth</div>
+
+            <div id="sixth">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+                <div>4</div>
+            </div>
+
+            <div id="empty">seventh</div>
+
+            <div id="seventh">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+                <div>4</div>
+            </div>
+
+            <div id="empty">eighth</div>
+
+            <div id="eighth">
+                <div id="color-red">1</div>
+                <div>2</div>
+                <div id="color-red">3</div>
+                <div>4</div>
+            </div>
+
+            <div id="empty">ninth</div>
+
+            <div id="ninth">
+                <div id="color-red">1</div>
+                <div>2</div>
+            </div>
+
+            <div id="empty">tenth</div>
+
+            <div id="tenth">
+                <div id="color-red">1</div>
+                <div>2</div>
+            </div>
+
+            <div id="empty">eleventh</div>
+            <div id="eleventh">
+                <div id="color-red">1</div>
+                <div>2</div>
+            </div>
+
+            <div id="empty">twelfth</div>
+            <div id="twelfth">
+                <div id="color-red">1</div>
+                <div>2</div>
+            </div>
+
+            <div id="empty">thirteenth</div>
+            <div id="thirteenth">
+                <div id="color-red">1</div>
+                <div>2</div>
+            </div>
+        </section>
+    </body>
+</html>
