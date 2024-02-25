@@ -78,14 +78,18 @@ nav {
 
 @media (max-width: 800px) {
     header {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 10% 1fr 10%;
     }
-    nav {
+
+    .navbar,
+    .toolbar,
+    .logo {
         justify-content: center;
+        grid-column: 2 / 3;
     }
     ul {
+        display: flex;
+        flex-direction: column;
         padding-left: 0;
-        margin: 1rem;
     }
 }
