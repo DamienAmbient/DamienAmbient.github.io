@@ -82,5 +82,23 @@
             undefined + 1; // Nan
             NaN + 1; // Nan
         </script>
+
+        <script>
+            "use strict";
+            // скоротити цей код за допомогою операторів += і *=:
+            let n = 2;
+            n += 5;
+            n *= 2;
+        </script>
+
+        <script>
+            let n1 = parseInt("   123   ".trim());
+            let n2 = parseInt("123z");
+            let n3 = Number(true);
+            let n4 = +false;
+
+            console.log(n1, n2, n3, n4);
+            // Перетворити змінні n1, n2, n3, n4 на числа
+        </script>
     </body>
 </html>
