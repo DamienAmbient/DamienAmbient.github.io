@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <h1>Hello, javascript!</h1>
+
+        <script>
+            const message1 = "Hello";
+            const message2 = "JavaScript";
+            alert(message1 + " " + message2);
+        </script>
+        <script>
+            "use strict";
+
+            let message;
+            message = "hello";
+            message = 123456;
+        </script>
+        <script>
+            function sum() {
+                const x = +prompt("введіть значення x:");
+                const y = +prompt("введіть значення y:");
+                return alert(x + y);
+            }
+            sum();
+        </script>
+
+        <script>
+            "use strict";
+
+            let a = 9007199254740991n;
+            let b = 9007199254740991n;
+            console.log(a + b);
+            // Uncaught TypeError: can't convert BigInt to number
+        </script>
+
+        <script>
+            "use strict";
+
+            let apples = 2;
+            let oranges = 3;
+
+            +alert(apples + oranges);
+        </script>
+
+        <script>
+            "use strict";
+
+            let aa = 1,
+                bb = 1;
+            let c = ++aa; // с кінцеве значення буде 2, a також 2, бо преікс
+            let d = bb++; // d кінцеве значення буде 2, b 1, бо постфікс
+        </script>
+
+        <script>
+            "use strict";
+
+            let aaa = 2;
+            let x = 1 + (aaa *= 2); // a=4  x=5
+        </script>
+
+        <script>
+            "use strict";
+
+            "" + 1 + 0; //10
+            "" - 1 + 0; // -1
+            true + false; // 1
+            6 / "3"; // 2
+            "2" * "3"; // 6
+            4 + 5 + "px"; //9px
+            "$" + 4 + 5; // $45
+            "4" - 2; // 2
+            "4px" - 2; // NaN
+            "  -9  " + 5; // -9 5
+            "  -9  " - 5; // -14
+            null + 1; // 1
+            undefined + 1; // Nan
+            NaN + 1; // Nan
+        </script>
+    </body>
+</html>
