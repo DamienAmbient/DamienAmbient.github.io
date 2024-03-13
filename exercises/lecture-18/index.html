@@ -16,7 +16,7 @@
                 }
                 // ...
                 return confirm("Did parents allow you?");
-            } // звісно, буде інакше працювати, без елс - буде виконуватись конфірм у будь-якому випадку.
+            } // якщо умова не виконається - перейде до конфірм
         </script>
 
         <script>
@@ -48,12 +48,23 @@
 
         <script>
             function pow(x, n) {
-                let num1 = prompt("Введіть х:");
-                let num2 = prompt("Введіть n:");
-                if (num1 < 1) return alert("неправильне значення параметра n");
-                return alert(Math.pow(num1, num2));
+                if (n < 1) {
+                    alert(
+                        "Параметр 'n' повинен бути натуральним числом (цілим числом від 1)"
+                    );
+                }
+
+                let result = 1;
+                for (let i = 0; i < n; i++) {
+                    result *= x;
+                }
+                return result;
             }
-            pow();
+
+            let x = +prompt("Введіть число x:");
+            let n = +prompt("Введіть натуральне число n:");
+            let powResult = pow(x, n);
+            alert(powResult);
         </script>
 
         <script>
@@ -81,12 +92,8 @@
                 console.log("C was called");
                 return "foo";
             }
-            A();
-            console.log(C());
-
-            // =====
-            B();
-            console.log(C());
+            console.log(A() ?? C());
+            console.log(B() || C());
         </script>
     </body>
 </html>
