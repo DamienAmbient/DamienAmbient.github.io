@@ -98,14 +98,7 @@ console.log(phoneNumber.trimStart());
 let sentence = "Always look on the bright side of life";
 console.log(sentence.includes("look up"));
 console.log(sentence.includes("look on"));
-
-let index = sentence.search(/look on/);
-
-if (index >= 8) {
-    console.log("Рядок містить 'look on' починаючи з 8-ї позиції.");
-} else {
-    console.log("Рядок не містить 'look on' починаючи з 8-ї позиції.");
-}
+console.log(sentence.includes("look on", 8));
 
 //13
 let sentence2 = "Always look on the bright side of life";
@@ -117,9 +110,11 @@ console.log(sentence2.indexOf("L"));
 let sentence3 = "Always look on the bright side of life";
 console.log(sentence3.substring(7));
 console.log(sentence3.substring(0, 7));
-let keyWord = sentence3.indexOf("look");
-console.log(sentence3.substring(keyWord, keyWord + 4)); // запарився в лоб рахувати, зробив через костиль
-
+let searchString = "look";
+let keyWord = sentence3.indexOf(searchString);
+if (keyWord !== -1) {
+    console.log(sentence3.substring(keyWord, keyWord + searchString.length));
+}
 //15
 const regex = /^[a-z0-9_-]{8,16}$/i;
 
