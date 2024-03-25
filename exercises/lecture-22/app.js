@@ -30,12 +30,12 @@ console.log(fourthP);
 //6
 let allContainer = document.querySelectorAll(".container");
 for (let i = 0; i < allContainer.length; i++) {
-    console.log(allContainer[i]);
+    console.log(allContainer[i].firstElementChild);
 }
 
 //7
 for (let i = 0; i < allContainer.length; i++) {
-    console.log(allContainer[i].firstElementChild);
+    console.log(allContainer[i].firstElementChild.textContent);
 }
 
 //8

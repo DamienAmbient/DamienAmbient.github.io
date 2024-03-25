@@ -2,7 +2,6 @@ const alert = document.querySelector(".alert");
 
 function setClass(element, text, classname) {
     element.classList.add(classname);
-    element.setAttribute("id", "alert");
     element.textContent = `A simple ${text} alert—check it out!`;
 }
 
