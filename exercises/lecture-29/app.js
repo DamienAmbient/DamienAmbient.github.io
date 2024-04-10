@@ -28,7 +28,8 @@ checkAuth.addEventListener("click", () => {
     } catch (e) {
         errorMessage.classList.add("message");
         errorMessage.textContent = e.toString();
-        dialogBoxId.appendChild(errorMessage);
+        // dialogBoxId.appendChild(errorMessage);
+        dialogBoxId.children[1].appendChild(errorMessage);
         showDialog();
     }
 });
@@ -45,6 +46,6 @@ function showDialog(e) {
 }
 
 function closeDialog() {
-    dialogBoxId.removeChild(errorMessage);
+    dialogBoxId.children[1].removeChild(errorMessage);
     dialogBoxId.close();
 }
