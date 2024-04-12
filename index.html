@@ -4,138 +4,59 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Damien's CarParts</title>
+        <link rel="stylesheet" href="css/styles.css" />
         <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="favicon-16x16.png"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         />
-        <link rel="stylesheet" href="css/main.css" />
-        <title>Моя домашня сторінка</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <!-- navigation -->
-                <a href="index.html">Home</a>
-                <a href="catalog.html">Catalog</a>
-                <a href="blog.html">Blog</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+        <nav class="navbar">
+            <div class="navbar-center">
+                <span class="nav-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span>Damien's CarParts</span>
+                <div class="cart-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>
+                    <div class="cart-items">0</div>
+                </div>
+            </div>
+        </nav>
 
-            <nav>
-                <a href="#" class="fa-solid fa-heart"></a>
-                <a href="cart.html" class="fa-solid fa-cart-shopping"></a>
-                <a href="#!" class="fa-solid fa-user"></a>
-            </nav>
+        <header class="hero">
+            <div class="banner">
+                <h1 class="banner-title">Car Parts online shop</h1>
+                <button class="banner-btn">Get started</button>
+            </div>
         </header>
-        <div>
-            <h2>Let's pretend here should be an online shop</h2>
-            <p>
-                But currently here are only the link to a
-                <a href="exercises/index.html">homework</a>
-            </p>
-        </div>
-        <footer>
-            <!-- створити тут секцію -->
-            <section>
-                <!-- створити тут div -->
-                <div>
-                    <h2>About</h2>
-                    <!-- 
-                        створити тут невпорядкований список з такмсм елементами
-                    -->
-                    <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Customers</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
 
-                <!-- створити тут div -->
-                <div>
-                    <h2>Resources</h2>
-                    <!-- 
-                        створити тут невпорядкований список з такмсм елементами 
-                    -->
-                    <ul>
-                        <li><a href="#">Docs</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">eBooks</a></li>
-                        <li><a href="#">Webinars</a></li>
-                    </ul>
+        <main>
+            <section class="products">
+                <div class="section-title">
+                    <h2>Our products</h2>
                 </div>
-
-                <!-- створити тут div -->
-                <div>
-                    <h2>Contact</h2>
-                    <!-- 
-                        створити тут невпорядкований список з такмсм елементами 
-                    -->
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Sales</a></li>
-                        <li><a href="#">Advertise</a></li>
-                    </ul>
+                <div class="products-center">
+                    <article class="product">
+                        <div class="img-container">
+                            <img
+                                src="./images/glass.jpg"
+                                alt="car part lens"
+                                class="product-img"
+                            />
+                            <button class="bag-btn" data-id="1">
+                                <i class="fas fa-shopping-cart">buy now</i>
+                            </button>
+                        </div>
+                        <h3>car lens</h3>
+                        <h4>255$</h4>
+                    </article>
                 </div>
             </section>
-
-            <section class="footer-social">
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://uk-ua.facebook.com" target="blank"
-                            ><i class="fa-brands fa-facebook"></i> facebook</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="blank"
-                            ><i class="fa-brands fa-twitter"></i> twitter/X</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://github.com" target="blank"
-                            ><i class="fa-brands fa-github"></i> github</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com" target="blank"
-                            ><i class="fa-brands fa-linkedin"></i> linkedin</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/" target="blank"
-                            ><i class="fa-brands fa-youtube"></i> youtube</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" target="blank"
-                            ><i class="fa-brands fa-instagram"></i> instagram</a
-                        >
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Footer legal -->
-            <!-- створити тут section -->
-            <section>
-                <!-- 
-                    створити тут невпорядкований список з такмсм елементами 
-                -->
-                <ul>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li>&copy; 2024 Copyright Shopaholic Inc.</li>
-                </ul>
-            </section>
-        </footer>
+        </main>
+        <script src="app.js"></script>
     </body>
 </html>
