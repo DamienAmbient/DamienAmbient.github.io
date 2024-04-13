@@ -1,0 +1,86 @@
+{
+    "items": [
+        {
+            "sys": { "id": "1" },
+            "fields": {
+                "title": "glass lens",
+                "price": 100,
+                "image": {
+                    "fields": { "file": { "url": "./images/glass.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": { "id": "2" },
+            "fields": {
+                "title": "wheel rim",
+                "price": 250,
+                "image": {
+                    "fields": { "file": { "url": "./images/wheel-rim.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": { "id": "3" },
+            "fields": {
+                "title": "gears shifter",
+                "price": 500,
+                "image": {
+                    "fields": { "file": { "url": "./images/gears.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": { "id": "4" },
+            "fields": {
+                "title": "suspension-moto",
+                "price": 350,
+                "image": {
+                    "fields": { "file": { "url": "./images/harley.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": { "id": "5" },
+            "fields": {
+                "title": "suspension-auto",
+                "price": 450,
+                "image": {
+                    "fields": {
+                        "file": { "url": "./images/suspension-auto.jpg" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": "6" },
+            "fields": {
+                "title": "engine",
+                "price": 1500,
+                "image": {
+                    "fields": { "file": { "url": "./images/engine.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": { "id": "7" },
+            "fields": {
+                "title": "cylinders",
+                "price": 750,
+                "image": {
+                    "fields": { "file": { "url": "./images/cylinders.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": { "id": "8" },
+            "fields": {
+                "title": "transmission",
+                "price": 455,
+                "image": {
+                    "fields": { "file": { "url": "./images/transmission.jpg" } }
+                }
+            }
+        }
+    ]
+}
