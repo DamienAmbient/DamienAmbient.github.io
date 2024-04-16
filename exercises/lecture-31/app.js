@@ -42,6 +42,7 @@ xhrPromise("GET", url)
     })
     .then((usersResponse) => {
         const users = JSON.parse(usersResponse);
+        console.log(users);
         const authors = document.querySelectorAll(".author");
 
         authors.forEach((author) => {
