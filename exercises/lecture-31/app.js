@@ -48,22 +48,18 @@ xhrPromise("GET", url)
     .then(async (response) => {
         const posts = JSON.parse(response);
         let result = "";
+
         for (const item of posts) {
             result += template(item);
         }
+
         document.getElementById("blog").innerHTML = result;
 
-        const userIds = posts.map((item) => item.userId);
-        const uniqueUserIds = [...new Set(userIds)];
-
-        for (const userId of uniqueUserIds) {
+        const authorElements = document.querySelectorAll(".author");
+        for (const authorElement of authorElements) {
+            const userId = authorElement.getAttribute("data-id");
             const userInfo = await getUserInfo(userId);
-            const authorElement = document.querySelector(
-                `.author[data-id="${userId}"]`
-            );
-            if (authorElement) {
-                authorElement.textContent = userInfo.name;
-            }
+            authorElement.textContent = userInfo.name;
         }
     })
     .catch((error) => {
