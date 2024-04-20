@@ -62,6 +62,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+.hero-low {
+    background: url("/images/radiator.jpg") center/cover no-repeat;
+}
+
 .banner {
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
@@ -251,4 +255,16 @@ body {
 .cart-footer h3 {
     text-transform: capitalize;
     margin-bottom: 1rem;
+}
+
+.ask {
+    display: flex;
+    flex-direction: column;
+}
+
+.ask label,
+input,
+textarea {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
