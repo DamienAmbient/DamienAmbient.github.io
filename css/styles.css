@@ -13,6 +13,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--mainBlack);
     background: var(--mainWhite);
@@ -267,4 +272,14 @@ input,
 textarea {
     margin-bottom: 1rem;
     font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    padding-right: 2rem;
+    color: var(--mainBlack);
+}
+
+.logo {
+    margin-right: 9rem;
 }
