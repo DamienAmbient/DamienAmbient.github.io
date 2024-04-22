@@ -86,28 +86,33 @@ class UI {
         cartItems.innerText = itemsTotal;
     }
     addCartItem(item) {
-        const div = document.createElement("div");
-        div.classList.add("cart-item");
-        div.innerHTML = `
-        <img src="${item.image}" alt="car part" />
-                            <div>
-                                <h4>${item.title}</h4>
-                                <h5>$ ${item.price}</h5>
-                                <span class="remove-item" data-id=${item.id}>remove</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-chevron-up" data-id=${item.id}></i>
-                                <p class="item-amount">${item.amount}</p>
-                                <i class="fas fa-chevron-down" data-id=${item.id}></i>
-                            </div>
-        `;
-        cartContent.appendChild(div);
+        const table = document.createElement("table");
+        table.classList.add("cart-item");
+        table.innerHTML = `
+        <tr>
+            <td><img src="${item.image}" alt="car part" /></td>
+            <td class="td-second">
+                <h4>${item.title}</h4>
+                <h5>$ ${item.price}</h5>
+                <span class="remove-item" data-id=${item.id}>remove</span>
+            </td>
+            <td class="td-third">
+                <i class="fas fa-chevron-up" data-id=${item.id}></i>
+                <p class="item-amount">${item.amount}</p>
+                <i class="fas fa-chevron-down" data-id=${item.id}></i>
+            </td>
+        </tr>
+    `;
+
+        cartContent.appendChild(table);
     }
     showCart() {
         cartOverlay.classList.add("transparentBcg");
         cartDOM.classList.add("showCart");
+        document.body.style.overflowY = "hidden";
     }
     setupAPP() {
+        this.clickTrigger();
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populateCart(cart);
@@ -120,6 +125,7 @@ class UI {
     hideCart() {
         cartOverlay.classList.remove("transparentBcg");
         cartDOM.classList.remove("showCart");
+        document.body.style.overflowY = "auto";
     }
     cartLogic() {
         clearCartBtn.addEventListener("click", () => {
@@ -127,9 +133,9 @@ class UI {
         });
         cartContent.addEventListener("click", (event) => {
             if (event.target.classList.contains("remove-item")) {
-                let removeItem = event.target;
-                let id = removeItem.dataset.id;
-                cartContent.removeChild(removeItem.parentElement.parentElement);
+                let removeItem = event.target.closest(".cart-item");
+                let id = removeItem.querySelector(".remove-item").dataset.id;
+                cartContent.removeChild(removeItem);
                 this.removeItem(id);
             } else if (event.target.classList.contains("fa-chevron-up")) {
                 let addAmount = event.target;
@@ -179,7 +185,13 @@ class UI {
     getSingleButton(id) {
         return buttonsDOM.find((button) => button.dataset.id === id);
     }
-    hideBasket() {}
+    clickTrigger() {
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                this.hideCart();
+            }
+        });
+    }
 }
 
 class Storage {
