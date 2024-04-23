@@ -126,7 +126,7 @@ body {
 .bag-btn {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 30%;
     background: var(--primaryColor);
     border: none;
     text-transform: uppercase;
@@ -134,7 +134,7 @@ body {
     letter-spacing: var(--mainSpacing);
     font-weight: bold;
     transition: var(--mainTransition);
-    transform: translateX(101%);
+    transform: translateY(-550%);
     cursor: pointer;
 }
 .bag-btn:hover {
@@ -280,6 +280,10 @@ a {
     text-decoration: none;
     padding-right: 2rem;
     color: var(--mainBlack);
+}
+
+.links {
+    display: flex;
 }
 
 .logo {

@@ -7,9 +7,16 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
+const form = document.querySelector(".ask");
+const formBtn = document.querySelector(".form-btn");
 
 let cart = [];
 let buttonsDOM = [];
+
+function clearForm() {
+    form.reset();
+}
+formBtn.addEventListener("click", clearForm);
 
 class Products {
     async getProducts() {
@@ -112,7 +119,8 @@ class UI {
         document.body.style.overflowY = "hidden";
     }
     setupAPP() {
-        this.clickTrigger();
+        this.clickTriggerEscape();
+        this.clickTriggerEmptySpace();
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populateCart(cart);
@@ -185,9 +193,16 @@ class UI {
     getSingleButton(id) {
         return buttonsDOM.find((button) => button.dataset.id === id);
     }
-    clickTrigger() {
+    clickTriggerEscape() {
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape") {
+                this.hideCart();
+            }
+        });
+    }
+    clickTriggerEmptySpace() {
+        document.addEventListener("click", (event) => {
+            if (event.target.classList.contains("cart")) {
                 this.hideCart();
             }
         });
