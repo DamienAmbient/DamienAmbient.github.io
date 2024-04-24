@@ -9,6 +9,7 @@ const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
 const form = document.querySelector(".ask");
 const formBtn = document.querySelector(".form-btn");
+const bannerBtn = document.querySelector(".banner-btn");
 
 let cart = [];
 let buttonsDOM = [];
@@ -121,6 +122,7 @@ class UI {
     setupAPP() {
         this.clickTriggerEscape();
         this.clickTriggerEmptySpace();
+        this.scrollToProducts();
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populateCart(cart);
@@ -205,6 +207,12 @@ class UI {
             if (event.target.classList.contains("cart")) {
                 this.hideCart();
             }
+        });
+    }
+    scrollToProducts() {
+        bannerBtn.addEventListener("click", function () {
+            const productsSection = document.getElementById("catalog");
+            productsSection.scrollIntoView({ behavior: "smooth" });
         });
     }
 }
