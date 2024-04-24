@@ -2,7 +2,7 @@
 
 :root {
     --primaryColor: #af0000;
-    --mainWhite: rgb(255, 255, 255, 1);
+    --mainWhite: rgba(255, 255, 255, 1);
     --mainBlack: #222;
     --mainGrey: #ececec;
     --mainSpacing: 0.1rem;
