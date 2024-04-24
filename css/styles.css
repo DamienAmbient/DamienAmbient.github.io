@@ -136,6 +136,7 @@ body {
     transition: var(--mainTransition);
     transform: translateY(-550%);
     cursor: pointer;
+    color: inherit;
 }
 .bag-btn:hover {
     color: var(--mainWhite);
