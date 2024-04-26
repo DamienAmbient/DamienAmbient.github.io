@@ -28,7 +28,7 @@ class Products {
             products = products.map((item) => {
                 const { title, price } = item.fields;
                 const { id } = item.sys;
-                const image = item.fields.image.fields.file.url;
+                const image = item.fields.image.url;
                 return { title, price, id, image };
             });
             return products;
@@ -41,6 +41,8 @@ class Products {
 class UI {
     displayProducts(products) {
         let result = "";
+
+        // <i class="fas fa-shopping-cart">buy now</i>
         products.forEach((product) => {
             result += `
         <article class="product">
@@ -51,7 +53,7 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id=${product.id}>
-                                <i class="fas fa-shopping-cart">buy now</i>
+                                <span>Buy now</span>
                             </button>
                         </div>
                         <h3>${product.title}</h3>
@@ -189,7 +191,7 @@ class UI {
         let button = this.getSingleButton(id);
         button.disabled = false;
         button.innerHTML = `
-        <i class='fas fa-shopping-cart'></i>buy now
+        buy now
         `;
     }
     getSingleButton(id) {

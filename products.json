@@ -5,9 +5,7 @@
             "fields": {
                 "title": "glass lens",
                 "price": 100,
-                "image": {
-                    "fields": { "file": { "url": "./images/glass.jpg" } }
-                }
+                "image": { "url": "./images/glass.jpg" }
             }
         },
         {
@@ -16,7 +14,7 @@
                 "title": "wheel rim",
                 "price": 250,
                 "image": {
-                    "fields": { "file": { "url": "./images/wheel-rim.jpg" } }
+                    "url": "./images/wheel-rim.jpg"
                 }
             }
         },
@@ -26,7 +24,7 @@
                 "title": "gears shifter",
                 "price": 500,
                 "image": {
-                    "fields": { "file": { "url": "./images/gears.jpg" } }
+                    "url": "./images/gears.jpg"
                 }
             }
         },
@@ -36,7 +34,7 @@
                 "title": "suspension-moto",
                 "price": 350,
                 "image": {
-                    "fields": { "file": { "url": "./images/harley.jpg" } }
+                    "url": "./images/harley.jpg"
                 }
             }
         },
@@ -46,9 +44,7 @@
                 "title": "suspension-auto",
                 "price": 450,
                 "image": {
-                    "fields": {
-                        "file": { "url": "./images/suspension-auto.jpg" }
-                    }
+                    "url": "./images/suspension-auto.jpg"
                 }
             }
         },
@@ -58,7 +54,7 @@
                 "title": "engine",
                 "price": 1500,
                 "image": {
-                    "fields": { "file": { "url": "./images/engine.jpg" } }
+                    "url": "./images/engine.jpg"
                 }
             }
         },
@@ -68,7 +64,7 @@
                 "title": "cylinders",
                 "price": 750,
                 "image": {
-                    "fields": { "file": { "url": "./images/cylinders.jpg" } }
+                    "url": "./images/cylinders.jpg"
                 }
             }
         },
@@ -78,7 +74,7 @@
                 "title": "transmission",
                 "price": 455,
                 "image": {
-                    "fields": { "file": { "url": "./images/transmission.jpg" } }
+                    "url": "./images/transmission.jpg"
                 }
             }
         }
