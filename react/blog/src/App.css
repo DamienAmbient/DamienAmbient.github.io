@@ -61,3 +61,8 @@ section {
     margin-top: 5rem;
     min-height: 35rem;
 }
+
+img {
+    width: 30rem;
+    height: 20rem;
+}

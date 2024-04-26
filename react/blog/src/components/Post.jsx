@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Post = () => {
-    const [post, setPost] = useState({});
+    const [post, setPost] = useState([]);
     const [likes, setLikes] = useState(0);
     const baseUrl =
         "https://my-json-server.typicode.com/DamienAmbient/DamienAmbient.github.io/posts";
@@ -9,9 +9,7 @@ const Post = () => {
     const fetchData = async () => {
         try {
             const response = await fetch(`${baseUrl}/1`);
-            console.log(response);
             const data = await response.json();
-            console.log(data);
             setPost(data);
         } catch (error) {
             console.error("Error fetching data:", error);
