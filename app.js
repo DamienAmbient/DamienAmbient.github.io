@@ -41,8 +41,6 @@ class Products {
 class UI {
     displayProducts(products) {
         let result = "";
-
-        // <i class="fas fa-shopping-cart">buy now</i>
         products.forEach((product) => {
             result += `
         <article class="product">
@@ -53,7 +51,7 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id=${product.id}>
-                                <span>Buy now</span>
+                                Buy now
                             </button>
                         </div>
                         <h3>${product.title}</h3>
