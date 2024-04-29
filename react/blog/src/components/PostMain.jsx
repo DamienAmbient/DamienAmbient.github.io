@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import { PostContext } from "./Post";
+// import { useContext } from "react";
+// // import { PostContext } from "./Post";
 
-const PostMain = () => {
-    const post = useContext(PostContext);
-    return <p>{post.content}</p>;
-};
+// const PostMain = () => {
+//     const post = useContext(PostContext);
+//     return <p>{post.content}</p>;
+// };
 
-export default PostMain;
+// export default PostMain;

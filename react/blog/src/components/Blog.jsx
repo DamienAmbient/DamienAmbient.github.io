@@ -1,18 +1,18 @@
 import React from "react";
+import { createContext } from "react";
+import Posts from "./Posts";
+// import Post from "./Post";
+import Layout from "./Layout";
 
-function Blog({ post }) {
+const BlogContext = createContext("");
+export const blogName = "My blog";
+function Blog() {
     return (
-        <article className="post">
-            <div className="cover-container">
-                <img src={post.cover} alt={post.title} />
-            </div>
-            <div className="post-footer">
-                <h3>
-                    {post.title} {post.id}
-                </h3>
-                <p>{post.content}</p>
-            </div>
-        </article>
+        <BlogContext.Provider value={blogName}>
+            <Layout>
+                <Posts />
+            </Layout>
+        </BlogContext.Provider>
     );
 }
 

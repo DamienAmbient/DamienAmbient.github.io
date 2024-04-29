@@ -1,9 +1,11 @@
-import PostTitle from "./PostTitle";
+// import PostTitle from "./PostTitle";
+import BlogInfo from "./BlogInfo";
 
 const Header = () => {
     return (
         <header>
-            <PostTitle></PostTitle>
+            {/* <PostTitle></PostTitle> */}
+            <BlogInfo></BlogInfo>
         </header>
     );
 };
