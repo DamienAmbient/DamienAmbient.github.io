@@ -4,11 +4,11 @@ import Posts from "./Posts";
 // import Post from "./Post";
 import Layout from "./Layout";
 
-const BlogContext = createContext("");
-export const blogName = "My blog";
+export const BlogContext = createContext("Default Blog Name");
+
 function Blog() {
     return (
-        <BlogContext.Provider value={blogName}>
+        <BlogContext.Provider value="My blog">
             <Layout>
                 <Posts />
             </Layout>
